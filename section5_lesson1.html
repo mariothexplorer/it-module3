@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общи проблеми със сигурността в уеб</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>Общи проблеми със сигурността в уеб</h2>
+
+        <ol class="main-list">
+            <li>
+                <span class="main-point">Уеб сигурност</span>
+                <span class="explanation">– защита на информацията срещу достъп, използване, разкриване, увреждане,
+                    промяна, преглед, запис или изтриване от неупълномощени потребители.</span>
+            </li>
+
+            <li>
+                <span class="main-point">Категории на заплахите в интернет:</span>
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">Загуба на целостта на данните</span>
+                        <span class="explanation"> – нарушителят добавя, модифицира или изтрива информация.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Загуба на конфиденциалност на данните</span>
+                        <span class="explanation"> – информацията става достъпна за неоторизирани потребители.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Загуба на услуги</span>
+                        <span class="explanation"> – дадени услуги не могат да се изпълняват в резултат от действията на
+                            атакуващия.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Загуба на контрол</span>
+                        <span class="explanation"> – услугите се използват от оторизирани потребители по неоторизиран
+                            начин.</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <span class="main-point">Атаки срещу нормалното функциониране на уеб сайт:</span>
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">DoS атаки (Denial of Service - отказ на услуга)</span>
+                        <span class="explanation"> — водят до отказ в обслужването. Проектирани да направят една машина
+                            или мрежов ресурс недостъпни за потребителите, най-често уеб сървъри.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Sniffing атаки (Подушване)</span>
+                        <span class="explanation"> — използват се за събиране или прихващане на данни чрез улавяне на
+                            мрежовия трафик. Ако данните не са криптирани, те могат да бъдат прочетени.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">IP Spoofing (Измама)</span>
+                        <span class="explanation"> — включва промяна на хедъра на IP пакети, за да изглеждат, че идват
+                            от доверен източник (различен от реалния адрес).</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <span class="main-point">Рискове при използване на бисквитки и уеб маяци:</span>
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">HTTP бисквитка (Cookie)</span>
+                        <span class="explanation"> — малък текстов файл, изпращан от сървъра и записван от браузъра.
+                            Използва се за разпознаване на посетители, запомняне на предпочитания и състояния.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Уеб маяк (Web Beacon)</span>
+                        <span class="explanation"> — малко (често прозрачно 1x1 пиксела) графично изображение, което
+                            изследва активността на потребителя (IP адрес, време на посещение, тип устройство).</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <span class="main-point">Сертификат за сигурност</span>
+                <span class="explanation">– за защита на връзката се използват криптографски протоколи като SSL (Secure
+                    Sockets Layer) и TLS (Transport Layer Security). Те криптират комуникацията между браузъра и
+                    сървъра. За осъществяване на сигурна връзка, на сървъра се инсталира SSL/TLS сертификат, който
+                    съдържа публичен ключ и информация за собственика.</span>
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">Безплатни (Self-signed)</span>
+                        <span class="explanation"> — браузърите често показват предупреждение за риск. Използват се
+                            предимно за тестови цели.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">Издадени от сертифициращ орган (CA)</span>
+                        <span class="explanation"> — валидни сертификати, които гарантират идентичността на сайта.
+                            Сайтовете с такъв сертификат използват <code>https://</code> и често имат икона на
+                            катинар.</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <span class="main-point">Публичен ключ и CAPTCHA</span>
+                <span class="explanation">– публичният ключ се използва за криптиране на данните, които само съответният
+                    частен ключ на сървъра може да декриптира. За повишаване на сигурността и разграничаване на хора от
+                    компютърни ботове
+                    се използва тестът <strong>CAPTCHA</strong> (Completely Automatic Public Turing test to tell
+                    Computers and Humans Apart). Пример е избирането на изображения или въвеждането на текст от
+                    картинка.</span>
+            </li>
+
+            <li>
+                <span class="main-point">Средства за повишаване сигурността на уеб сайт:</span>
+                <ol class="bulgarian-list">
+                    <li>Обновяване на всички скриптове, платформи (CMS) и разширения.</li>
+                    <li>Редовно архивиране (backup) на сайта.</li>
+                    <li>Постоянно сканиране на сървъра за зловреден код.</li>
+                    <li>Инсталиране на SSL/TLS сертификат.</li>
+                    <li>Използване на силни пароли за администрация.</li>
+                    <li>Използване на специализирани приставки (plugins) за защита (защитна стена, анти-спам, Google
+                        reCAPTCHA).</li>
+                </ol>
+            </li>
+        </ol>
+
+    </div>
+
+    <footer></footer>
+    <script src="scripts/insert-header.js"></script>\r\n
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

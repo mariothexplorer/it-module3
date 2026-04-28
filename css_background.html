@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформяне на фон с CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>Оформяне на фон с CSS</h2>
+
+        <table class="css-table">
+            <thead>
+                <tr>
+                    <th>Свойство</th>
+                    <th>Какво прави</th>
+                    <th>Пример</th>
+                    <th>Визуализация в браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="method-cell">background-color</td>
+                    <td class="how-cell">Задава цвета на фона</td>
+                    <td class="syntax-cell">background-color: #ff0000;<br>background-color: red;<br>background-color:
+                        rgba(255, 0, 0, 0.5);</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="background-color-demo">
+                                <div class="bg-color-example"
+                                    style="background-color: #ff0000; padding: 15px; margin-bottom: 10px; color: white; text-align: center;">
+                                    background-color: #ff0000
+                                </div>
+                                <div class="bg-color-example"
+                                    style="background-color: red; padding: 15px; margin-bottom: 10px; color: white; text-align: center;">
+                                    background-color: red
+                                </div>
+                                <div class="bg-color-example"
+                                    style="background-color: rgba(255, 0, 0, 0.5); padding: 15px; color: white; text-align: center;">
+                                    background-color: rgba(255, 0, 0, 0.5)
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">background-image</td>
+                    <td class="how-cell">Задава изображение за фон</td>
+                    <td class="syntax-cell">background-image: url('image.jpg');<br>background-image:
+                        linear-gradient(red, blue);</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="background-image-demo">
+                                <div class="bg-image-example"
+                                    style="background-image: linear-gradient(red, blue); padding: 20px; margin-bottom: 10px; text-align: center; min-height: 60px; color: white;">
+                                    background-image: linear-gradient(red, blue)
+                                </div>
+                                <div class="bg-image-example"
+                                    style="background-color: #336699; padding: 20px; text-align: center; min-height: 60px; color: white;">
+                                    background-image: url('image.jpg')
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="method-cell">background-repeat</td>
+                    <td class="how-cell">Определя как се повтаря фоновата снимка</td>
+                    <td class="syntax-cell">background-repeat: repeat;<br>background-repeat:
+                        no-repeat;<br>background-repeat: repeat-x;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="background-repeat-demo">
+                                <!-- repeat: пълно повторение във всички посоки -->
+                                <div class="bg-repeat-example"
+                                    style="background-color: #f0f0f0; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iNSIgZmlsbD0iIzMzNjY5OSIvPjwvc3ZnPg=='); background-repeat: repeat; padding: 20px; margin-bottom: 10px; text-align: center; min-height: 60px; font-weight: bold;">
+                                    background-repeat: repeat
+                                </div>
+
+                                <!-- no-repeat: без повторение -->
+                                <div class="bg-repeat-example"
+                                    style="background-color: #f0f0f0; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHJlY3Qgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiBmaWxsPSIjRjA2RjZCIiBzdHJva2U9IiMzMzY2OTkiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=='); background-repeat: no-repeat; background-position: center; padding: 20px; margin-bottom: 10px; text-align: center; min-height: 60px; font-weight: bold;">
+                                    background-repeat: no-repeat
+                                </div>
+
+                                <!-- repeat-x: повторение само хоризонтално -->
+                                <div class="bg-repeat-example"
+                                    style="background-color: #f0f0f0; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBvbHlnb24gcG9pbnRzPSI1LDEwIDEwLDUgMTUsMTAgMTAsMTUiIGZpbGw9IiMzMzY2OTkiLz48L3N2Zz4='); background-repeat: repeat-x; padding: 20px; text-align: center; min-height: 60px; font-weight: bold;">
+                                    background-repeat: repeat-x
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td class="method-cell">background-attachment</td>
+                    <td class="how-cell">Определя дали фонът е фиксиран или се движи със съдържанието</td>
+                    <td class="syntax-cell">background-attachment: scroll;<br>background-attachment: fixed;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="background-attachment-demo">
+                                <div class="bg-attachment-example"
+                                    style="background-color: #336699; padding: 20px; margin-bottom: 10px; text-align: center; min-height: 100px; color: white;">
+                                    <div style="height: 150px; padding-top: 50px;">
+                                        background-attachment: scroll<br>(фонът се движи със съдържанието)
+                                    </div>
+                                </div>
+                                <div class="bg-attachment-example"
+                                    style="background-color: #336699; padding: 20px; text-align: center; min-height: 100px; color: white;">
+                                    background-attachment: fixed<br>(фонът остава фиксиран)
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="method-cell">background-position</td>
+                    <td class="how-cell">Определя началната позиция на фоновата снимка</td>
+                    <td class="syntax-cell">background-position: center;<br>background-position: top
+                        left;<br>background-position: 10px 20px;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="background-position-demo">
+                                <!-- center: центрирано -->
+                                <div class="bg-position-example"
+                                    style="background-color: #e8f4f8; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTUiIGZpbGw9IiNGRjAwMDAiLz48L3N2Zz4='); background-repeat: no-repeat; background-position: center; padding: 20px; margin-bottom: 10px; text-align: center; min-height: 80px; border: 2px solid #3498db; border-radius: 5px;">
+                                    <div style="font-weight: bold; color: #2c3e50;">
+                                        background-position: center
+                                    </div>
+                                    <div style="color: #7f8c8d; font-size: 14px; margin-top: 5px;">
+                                        Червеният кръг е в средата
+                                    </div>
+                                </div>
+
+                                <!-- top left: горе вляво -->
+                                <div class="bg-position-example"
+                                    style="background-color: #fff8e1; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCI+PHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjMzQ5OERCICIvPjwvc3ZnPg=='); background-repeat: no-repeat; background-position: top left; padding: 20px; margin-bottom: 10px; text-align: center; min-height: 80px; border: 2px solid #f39c12; border-radius: 5px;">
+                                    <div style="font-weight: bold; color: #2c3e50;">
+                                        background-position: top left
+                                    </div>
+                                    <div style="color: #7f8c8d; font-size: 14px; margin-top: 5px;">
+                                        Синият квадрат е горе вляво
+                                    </div>
+                                </div>
+
+                                <!-- 10px 20px: конкретни координати -->
+                                <div class="bg-position-example"
+                                    style="background-color: #f9f9f9; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNSI+PHBvbHlnb24gcG9pbnRzPSIxMiw1IDIwLDIwIDUsMjAiIGZpbGw9IiMyRENFNTQiLz48L3N2Zz4='); background-repeat: no-repeat; background-position: 10px 20px; padding: 20px; text-align: center; min-height: 80px; border: 2px solid #27ae60; border-radius: 5px; position: relative;">
+                                    <div style="font-weight: bold; color: #2c3e50;">
+                                        background-position: 10px 20px
+                                    </div>
+                                    <div style="color: #7f8c8d; font-size: 14px; margin-top: 5px;">
+                                        Зеленият триъгълник е на 10px отляво, 20px отгоре
+                                    </div>
+
+                                    <!-- Проста индикация за позиция -->
+                                    <div
+                                        style="position: absolute; top: 20px; left: 10px; width: 6px; height: 6px;; border-radius: 50%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

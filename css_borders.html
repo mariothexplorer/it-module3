@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задаване на рамки с CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>Задаване на рамки с CSS</h2>
+
+        <table class="css-table">
+            <thead>
+                <tr>
+                    <th>Свойство</th>
+                    <th>Какво прави</th>
+                    <th>Пример</th>
+                    <th>Визуализация в браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="method-cell">border-color</td>
+                    <td class="how-cell">Задава цвета на рамката</td>
+                    <td class="syntax-cell">border-color: red;<br>border-color: #ff0000;<br>border-color: rgb(255, 0,
+                        0);</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-demo">
+                                <div class="border-color-example"
+                                    style="border: 3px solid #ff0000; padding: 10px; margin-bottom: 10px; background-color: #fff5f5;">
+                                    border-color: #ff0000 (червен)
+                                </div>
+                                <div class="border-color-example"
+                                    style="border: 3px solid #0000ff; padding: 10px; margin-bottom: 10px; background-color: #f5f5ff;">
+                                    border-color: #0000ff (син)
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">border-style</td>
+                    <td class="how-cell">Задава стила на рамката</td>
+                    <td class="syntax-cell">border-style: solid;<br>border-style: dotted;<br>border-style: dashed; <br>
+                        border-style: double</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-style-demo">
+                                <div class="border-style-example"
+                                    style="border: 3px solid #333; padding: 10px; margin-bottom: 10px;">
+                                    border-style: solid
+                                </div>
+                                <div class="border-style-example"
+                                    style="border: 3px dotted #333; padding: 10px; margin-bottom: 10px;">
+                                    border-style: dotted
+                                </div>
+                                <div class="border-style-example"
+                                    style="border: 3px dashed #333; padding: 10px; margin-bottom: 10px;">
+                                    border-style: dashed
+                                </div>
+                                <div class="border-style-example" style="border: 3px double #333; padding: 10px;">
+                                    border-style: double
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">border-width</td>
+                    <td class="how-cell">Задава дебелината на рамката</td>
+                    <td class="syntax-cell">border-width: 1px;<br>border-width: 3px;<br>border-width: 5px;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-width-demo">
+                                <div class="border-width-example"
+                                    style="border: 1px solid #333; padding: 10px; margin-bottom: 10px;">
+                                    border-width: 1px
+                                </div>
+                                <div class="border-width-example"
+                                    style="border: 3px solid #333; padding: 10px; margin-bottom: 10px;">
+                                    border-width: 3px
+                                </div>
+                                <div class="border-width-example" style="border: 5px solid #333; padding: 10px;">
+                                    border-width: 5px
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">border (съкратен)</td>
+                    <td class="how-cell">Съкратен запис за рамката</td>
+                    <td class="syntax-cell">border: 2px solid red;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-short-demo">
+                                <div class="border-short-example"
+                                    style="border: 2px solid red; padding: 10px; margin-bottom: 10px; background-color: #fff5f5;">
+                                    border: 2px solid red
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">border-radius</td>
+                    <td class="how-cell">Задава закръглени ъгли</td>
+                    <td class="syntax-cell">border-radius: 10px;<br>border-radius: 50%;<br>border-radius: 10px 5px 10px
+                        5px;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-radius-demo">
+                                <div class="border-radius-example"
+                                    style="border: 2px solid #333; border-radius: 10px; padding: 10px; margin-bottom: 10px;">
+                                    border-radius: 10px
+                                </div>
+                                <div class="border-radius-example"
+                                    style="border: 2px solid #333; border-radius: 20px; padding: 10px; margin-bottom: 10px;">
+                                    border-radius: 20px
+                                </div>
+                                <div class="border-radius-example"
+                                    style="border: 2px solid #333; border-radius: 50%; padding: 10px; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    border-radius: 50%
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="method-cell">индивидуални страни</td>
+                    <td class="how-cell">Задаване на различни свойства за отделни страни</td>
+                    <td class="syntax-cell">border-top: 3px solid red;<br>border-right: 2px dotted
+                        blue;<br>border-bottom: 4px dashed green;<br>border-left: 1px solid orange;</td>
+                    <td class="example-cell">
+                        <div class="visualization-box">
+                            <div class="border-sides-example"
+                                style="border-top: 3px solid red; border-right: 2px dotted blue; border-bottom: 4px dashed green; border-left: 1px solid orange; padding: 15px; text-align: center;">
+                                Различни рамки за всяка страна
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

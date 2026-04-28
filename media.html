@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебен Център: Медия (Изображения, Аудио, Видео)</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>HTML Тагове за Изображения, Аудио и Видео</h2>
+
+        <p>За да работят, примерите по-долу изискват да имате файлове (изображение.jpg, аудио.mp3, видео.mp4) в същата
+            папка като HTML файла.</p>
+
+        <table class="tag-table">
+            <thead>
+                <tr>
+                    <th>Таг</th>
+                    <th>Описание / Важни Атрибути</th>
+                    <th>HTML Пример</th>
+                    <th>Визуализация в Браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tag-name-cell">&lt;img&gt;</td>
+                    <td class="tag-description-cell">
+                        Вгражда изображение.
+                        <br>
+                        **`src`** (път към файла) и **`alt`** (алтернативен текст) са задължителни.
+                        <br>
+                        Други: **`width` / `height`**, **`loading="lazy"`**.
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;img src="снимка.jpg" alt="Планина" width="300" height="200" loading="lazy"&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <img src="https://via.placeholder.com/150x100?text=Изображение" alt="Примерно изображение"
+                            width="150" height="100">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;audio&gt;</td>
+                    <td class="tag-description-cell">
+                        Вгражда аудио съдържание. Използва **`&lt;source&gt;`** за различни формати.
+                        <br>
+                        Важни: **`controls`**, **`autoplay`**, **`loop`**, **`preload`**.
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;audio controls loop&gt;<br>&nbsp;&nbsp;&lt;source src="музика.mp3" type="audio/mpeg"&gt;<br>&nbsp;&nbsp;... Браузърът не поддържа<br>&lt;/audio&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <audio controls>
+                            <source src="non-existent.mp3" type="audio/mpeg">
+                            Вашият браузър не поддържа аудио елемента.
+                        </audio>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;video&gt;</td>
+                    <td class="tag-description-cell">
+                        Вгражда видео съдържание. Използва **`&lt;source&gt;`** за различни формати.
+                        <br>
+                        Важни: **`controls`**, **`width` / `height`**, **`poster`** (изображение-плакат), **`muted`**,
+                        **`playsinline`**.
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;video width="200" controls poster="плакат.jpg"&gt;<br>&nbsp;&nbsp;&lt;source src="клип.mp4" type="video/mp4"&gt;<br>&nbsp;&nbsp;... Браузърът не поддържа<br>&lt;/video&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <video width="100%" height="auto" controls class="video-bg">
+                            <source src="non-existent.mp4" type="video/mp4">
+                            Вашият браузър не поддържа видео елемента.
+                        </video>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;source&gt;</td>
+                    <td class="tag-description-cell">
+                        Дефинира **множество медийни източници** за елементите **`&lt;audio&gt;`** и
+                        **`&lt;video&gt;`**. Браузърът избира първия поддържан.
+
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;audio controls&gt;<br>&nbsp;&nbsp;&lt;source src="file.webm" type="audio/webm"&gt;<br>&nbsp;&nbsp;&lt;source src="file.mp3" type="audio/mpeg"&gt;<br>&lt;/audio&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        Вижда се като част от аудио или видео плейъра (показано по-горе).
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

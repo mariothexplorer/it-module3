@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуално оформяне на уеб сайт с използване на CSS</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>Визуално оформяне на уеб сайт с използване на CSS</h2>
+
+        <ol class="main-list">
+            <li>
+                <span class="main-point">Стил (Style) Атрибутът style</span>
+                <span class="explanation">се използва за задаване на визуален стил на HTML елемент, например цвят,
+                    размер, шрифт и др. Форматът му е: &lt;tagname style="property: value;"&gt;</span>
+            </li>
+
+            <li>
+                <span class="main-point">Cascading Style Sheets (CSS)</span>
+                <span class="explanation">- език за описание на стилове, който се използва заедно с HTML. Той е създаден
+                    за лесно управление на визуалното представяне на съдържанието (шрифтове, размери, цветове, фонове,
+                    полета и др.), без да се налага промяна на самите HTML елементи. CSS е мощен инструмент, който с
+                    редактиране на един или няколко параметъри може да се промени външния вид на целия сайт.</span>
+
+                <table class="css-table">
+                    <thead>
+                        <tr>
+                            <th>Метод</th>
+                            <th>Описание</th>
+                            <th>Синтаксис</th>
+                            <th>Пример</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="method-cell">Inline (Вграден)</td>
+                            <td class="how-cell">Чрез атрибута style на конкретен елемент, важи само за него</td>
+                            <td class="syntax-cell">&lt;tag style="свойство: стойност;"&gt;</td>
+                            <td class="example-cell">&lt;p style="color: red;"&gt;Червен текст&lt;/p&gt;</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Internal (Вътрешен)</td>
+                            <td class="how-cell">Като блок със стилове, затворени в тага &lt;style&gt; в заглавната част
+                                &lt;head&gt;, засяга елементите само от текущата страница</td>
+                            <td class="syntax-cell">&lt;style&gt;<br> селектор {<br> свойство: стойност;<br>
+                                }<br>&lt;/style&gt;</td>
+                            <td class="example-cell">&lt;style&gt;<br> p {<br> color: blue;<br> font-size: 14px;<br>
+                                }<br>&lt;/style&gt;</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">External (Външен)</td>
+                            <td class="how-cell">Стиловете са описани в отделен текстов файл с разширение .css. Връзката
+                                към него се задава с елемент &lt;link&gt; в заглавната част &lt;head&gt;</td>
+
+                            <td class="syntax-cell">&lt;link rel="stylesheet" href="style.css"&gt;</td>
+                            <td class="example-cell">В style.css файл:<br>body {<br> font-family: Arial;<br> background:
+                                #f0f0f0;<br>}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+
+            <li>
+                <span class="main-point">Селекторът</span>
+                <span class="explanation">е шаблон, описващ по определени правила елементите, върху които се прилага
+                    правилото. Например селекторът "div" ще съвпадне с всички &lt;div&gt; елементи, а селекторът "div
+                    h1" - с елементите &lt;h1&gt;, които са вложени в &lt;div&gt; елемент. Селекторите могат да бъдат
+                    няколко, разделени със запетаи. В такъв случай зададените свойства се отнасят за всеки от
+                    тях.</span>
+            </li>
+
+            <li>
+                <span class="main-point">Работа с езика Cascading Style Sheets (CSS)</span>
+                <span class="explanation">- CSS кодът представлява последователност от правила, всяко от които започва
+                    със селектори, последвани от блок с дефиниции от свойства и стойности, които им се
+                    присвояват.<br>Обобщената структура на едно CSS правило е: селектор1, селектор2 { свойство1:
+                    стойност; свойство2: стойност; ... }<br>Правилата са каскадни, т.е. приложени към даден елемент, те
+                    се разпростират върху всичките му подчинени елементи.</span>
+            </li>
+
+            <li>
+                <span class="main-point">Видове селектори в Cascading Style Sheets (CSS):</span>
+
+                <table class="css-table">
+                    <thead>
+                        <tr>
+                            <th>Вид селектор</th>
+                            <th>Синтаксис</th>
+                            <th>Пример</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="method-cell">Селектори за клас</td>
+                            <td class="syntax-cell">.клас<br>елемент.клас</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">.important</span> {
+                                    <span class="css-property">color</span>: <span class="css-value">red</span>;
+                                    <span class="css-property">font-weight</span>: <span class="css-value">bold</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира елементи с определен клас. Може да се комбинира с тип на елемент.</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Групиране на селектори</td>
+                            <td class="syntax-cell">селектор1, селектор2</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">h1, h2, h3, .title</span> {
+                                    <span class="css-property">color</span>: <span class="css-value">#2c3e50</span>;
+                                    <span class="css-property">border-bottom</span>: <span class="css-value">2px solid
+                                        #3498db</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Прилага същите стилове към няколко различни селектора.</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">ID селектори</td>
+                            <td class="syntax-cell">#id</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">#header</span> {
+                                    <span class="css-property">background</span>: <span class="css-value">#333</span>;
+                                    <span class="css-property">color</span>: <span class="css-value">white</span>;
+                                    <span class="css-property">padding</span>: <span class="css-value">20px</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира конкретен елемент с уникален идентификатор (id).</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Селектор по тип</td>
+                            <td class="syntax-cell">елемент</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">p</span> {
+                                    <span class="css-property">line-height</span>: <span class="css-value">1.6</span>;
+                                    <span class="css-property">margin</span>: <span class="css-value">10px 0</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира всички елементи от даден тип (p, div, h1 и т.н.)</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Универсален селектор</td>
+                            <td class="syntax-cell">*</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">*</span> {
+                                    <span class="css-property">margin</span>: <span class="css-value">0</span>;
+                                    <span class="css-property">padding</span>: <span class="css-value">0</span>;
+                                    <span class="css-property">box-sizing</span>: <span
+                                        class="css-value">border-box</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира всички елементи на страницата.</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Селектор по атрибут</td>
+                            <td class="syntax-cell">[атрибут]<br>[атрибут=стойност]</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">input[type="text"]</span> {
+                                    <span class="css-property">border</span>: <span class="css-value">1px solid
+                                        #ccc</span>;
+                                    <span class="css-property">padding</span>: <span class="css-value">5px</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира елементи с определен атрибут или конкретна стойност на атрибут.</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Дъщерен селектор</td>
+                            <td class="syntax-cell">родител > дете</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">nav > ul</span> {
+                                    <span class="css-property">list-style</span>: <span class="css-value">none</span>;
+                                    <span class="css-property">padding</span>: <span class="css-value">0</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира директните дъщерни елементи (само едно ниво навлизане).</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Селектор за съсед</td>
+                            <td class="syntax-cell">елемент1 + елемент2</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">h1 + p</span> {
+                                    <span class="css-property">margin-top</span>: <span class="css-value">5px</span>;
+                                    <span class="css-property">font-style</span>: <span class="css-value">italic</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира елемент, който е непосредствено след друг елемент.</td>
+                        </tr>
+                        <tr>
+                            <td class="method-cell">Псевдо-класове</td>
+                            <td class="syntax-cell">селектор:псевдоклас</td>
+                            <td class="example-cell">
+                                <div class="css-code-block">
+                                    <span class="css-selector">a:hover</span> {
+                                    <span class="css-property">color</span>: <span class="css-value">red</span>;
+                                    <span class="css-property">text-decoration</span>: <span
+                                        class="css-value">underline</span>;
+                                    }
+                                </div>
+                            </td>
+                            <td>Избира елементи в специфично състояние (:hover, :focus, :first-child и т.н.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

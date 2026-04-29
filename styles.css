@@ -1,0 +1,771 @@
+/* Общи стилове за целия сайт */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2') format('woff2');
+}
+
+:root {
+    --accent: #007bff;
+    --muted: #6c757d;
+    --bg: #f4f4f4;
+    --text: #333;
+}
+
+/* Reset / accessibility helpers */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background-color: #333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Screen-reader helper */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Helper classes taken from local pages */
+.code-block {
+    font-family: Consolas, monospace;
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #007bff;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.property-name {
+    color: #d63384;
+    font-weight: bold;
+}
+
+.property-value {
+    color: #0d6efd;
+}
+
+.comment {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.h1-view {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.h2-view {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.h3-view {
+    font-size: 1.17em;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 5px 0;
+}
+
+.property-cell {
+    font-weight: bold;
+    color: #0d6efd;
+    font-family: Consolas, monospace;
+    width: 20%;
+    background-color: #f0f8ff;
+}
+
+.description-cell {
+    width: 30%;
+}
+
+.example-cell {
+    width: 25%;
+    font-family: Consolas, monospace;
+    background-color: #f8f9fa;
+    font-size: 0.9em;
+}
+
+.visualization-cell {
+    width: 25%;
+    padding: 10px;
+}
+
+/* Заглавна част */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    margin-left: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 1.5rem;
+}
+
+/* Статично меню отляво (Фиксирана навигация) */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background: #555;
+    padding-top: 20px;
+    display: block;
+    box-sizing: border-box;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.brand-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.brand-link {
+    display: block;
+    text-decoration: none;
+    padding: 5px 0 !important;
+    border-bottom: 1px solid #777 !important;
+}
+
+.brand-image {
+    max-height: 90px; /* Още малко по-голям размер */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #777;
+    transition: background 0.3s, color 0.2s;
+    text-align: left;
+}
+
+nav a:hover {
+    background: #777;
+}
+
+nav a:focus {
+    background: #6b6b6b;
+}
+
+nav a.active {
+    background: #ddd;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #4a4a4a;
+}
+
+/* Submenu styling to match the example */
+.submenu {
+    display: none;
+    background-color: #666;
+    padding: 0;
+    border-bottom: 1px solid #777;
+}
+
+.submenu[style*="display: block"] {
+    display: block;
+}
+
+.submenu.open {
+    display: block;
+}
+
+.submenu a {
+    padding: 8px 15px 8px 30px;
+    text-transform: none;
+    font-size: 0.9em;
+    border-bottom: none;
+    background-color: #666;
+    display: block;
+}
+
+.submenu a:hover,
+.submenu a:focus {
+    background-color: #888;
+    outline: none;
+}
+
+.submenu a.active {
+    background-color: #888;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Keyboard focus outlines for accessibility */
+.dropdown-toggle:focus-visible,
+nav a:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #ffd966;
+    outline-offset: 2px;
+}
+
+/* Основно съдържание */
+.container {
+    margin-left: 220px;
+    width: auto;
+    margin-right: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 80vh;
+}
+
+h2,
+h3 {
+    color: #333;
+}
+
+/* Футър */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1.5em 0;
+    margin-top: auto;
+    font-size: 0.85em;
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+.footer-left {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.footer-line {
+    margin: 5px 0;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+/* Унифицирани стилове за таблици */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid #dee2e6;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border: 1px solid #dee2e6;
+    vertical-align: top;
+}
+
+th {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+
+
+/* Специфични стилове за таблиците с клас .tag-table */
+.tag-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.tag-table th,
+.tag-table td {
+    border: none;
+    padding: 15px 10px;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.tag-table th {
+    text-align: left;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+
+.tag-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Малки помощни класове */
+.visualization-box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reusable utilities and demo component styles (extracted from inline styles) */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+/* margin-top helpers */
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.my-15 {
+    margin: 15px 0 !important;
+}
+
+.main-point {
+    font-weight: bold !important;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* Текст и снимка */
+    gap: 20px;
+    align-items: start;
+    margin: 15px 0;
+    padding: 10px;
+
+}
+
+.content-image {
+    max-width: 200px;
+    /* Малък размер */
+    width: 100%;
+    aspect-ratio: 3/4; /* еднакво съотношение ширина/височина */
+    object-fit: cover; /* запазва пропорциите без да се сплесква снимката */
+    border-radius: 8px; /* опционално, леко заобляне за по-добра визия */
+}
+
+/* За снимката в .centered-image */
+.centered-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.centered-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+
+}
+
+/* За мобилни устройства */
+@media (max-width: 768px) {
+    .image-container {
+        grid-template-columns: 1fr;
+        /* Една колона */
+        justify-items: center;
+        /* Центриране на всичко */
+        text-align: center;
+    }
+
+    .content-image {
+        max-width: 100%;
+    }
+}
+
+/* Заменете целия .bulgarian-list блок със следното: */
+.bulgarian-list {
+    list-style-type: none;
+    margin: 10px 0 10px 30px;
+    padding-left: 0;
+}
+
+.bulgarian-list>li {
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    counter-increment: bulgarian-counter;
+}
+
+/* Ръчно задаване на букви за първите 10 елемента */
+.bulgarian-list>li:nth-child(1)::before {
+    content: "А) ";
+}
+
+.bulgarian-list>li:nth-child(2)::before {
+    content: "Б) ";
+}
+
+.bulgarian-list>li:nth-child(3)::before {
+    content: "В) ";
+}
+
+.bulgarian-list>li:nth-child(4)::before {
+    content: "Г) ";
+}
+
+.bulgarian-list>li:nth-child(5)::before {
+    content: "Д) ";
+}
+
+.bulgarian-list>li:nth-child(6)::before {
+    content: "Е) ";
+}
+
+.bulgarian-list>li:nth-child(7)::before {
+    content: "Ж) ";
+}
+
+.bulgarian-list>li:nth-child(8)::before {
+    content: "З) ";
+}
+
+.bulgarian-list>li:nth-child(9)::before {
+    content: "И) ";
+}
+
+.bulgarian-list>li:nth-child(10)::before {
+    content: "К) ";
+}
+
+.bulgarian-list>li::before {
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* За тирета - оставяте същото: */
+.dash-list {
+    list-style-type: none;
+    margin: 10px 0 10px 20px;
+    padding-left: 20px;
+}
+
+.dash-list li::before {
+    content: "– ";
+    margin-right: 5px;
+}
+
+.dot-list {
+    list-style-type: none;
+    margin: 10px 0 10px 20px;
+    padding-left: 20px;
+}
+
+.dot-list>li::before {
+    content: "• ";
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* Grid demo */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Simple card used by small demos */
+.card {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Font helpers used in font demos */
+.ff-tahoma {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.ff-times {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Flex utilities */
+.flex {
+    display: flex;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* Additional utilities and demo components */
+.m-0 {
+    margin: 0 !important;
+}
+
+.video-bg {
+    background: #333;
+}
+
+.border-card {
+    border: 2px solid #336699;
+    border-radius: 8px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+}
+
+.padding-visual-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.padding-visual-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.padding-visual-left {
+    top: 10px;
+    left: 0;
+    width: 10px;
+    bottom: 10px;
+}
+
+.padding-visual-right {
+    top: 10px;
+    right: 0;
+    width: 10px;
+    bottom: 10px;
+}
+
+/* Border demos */
+.border-sides-demo {
+    border-top: 3px solid #ff0000;
+    border-right: 3px solid #0000ff;
+    border-bottom: 3px solid #008000;
+    border-left: 3px solid #ff9900;
+    padding: 15px;
+}
+
+.border-style-container {
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.visualization-box.tall-column {
+    height: 120px;
+    flex-direction: column;
+}
+
+.border-example-2 {
+    border-top: 3px dashed #ff6600;
+    border-right: 2px solid #33cc33;
+    border-bottom: 4px double #3366ff;
+    border-left: 2px dotted #ff3366;
+    border-radius: 15px 5px 15px 5px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+}
+
+.border-example-3 {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #ff0000;
+    border-radius: 50%;
+    background-color: #ffeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Мобилно меню стилове */
+.mobile-menu-toggle {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    background-color: #444;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    font-weight: bold;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: #555;
+}
+
+.nav-content {
+    display: block;
+}
+
+/* Отзивчиви настройки */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-content {
+        display: none;
+    }
+
+    .nav-content.show {
+        display: block;
+    }
+
+    header {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    header h1 {
+        white-space: normal;
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .container {
+        margin: 0;
+        padding: 15px;
+        overflow-x: hidden;
+    }
+
+    footer {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .two-col-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .centered-image img {
+        max-width: 100%;
+    }
+}
+
+/* Quiz styles */
+.quiz-correct { color: green; }
+.quiz-wrong { color: red; }
+.quiz-correct-highlight { color: green; font-weight: bold; }
+.submit-btn {
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 40px;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.submit-btn:hover { background-color: #0056b3; }
+.quiz-result { margin-top: 20px; font-weight: bold; }

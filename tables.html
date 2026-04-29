@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебен Център: Таблици</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>HTML Тагове за Таблици</h2>
+
+        <table class="tag-table">
+            <thead>
+                <tr>
+                    <th>Таг</th>
+                    <th>Описание / Атрибути</th>
+                    <th>HTML Пример</th>
+                    <th>Визуализация в Браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tag-name-cell">&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</td>
+                    <td class="tag-description-cell">
+                        **&lt;table&gt;** дефинира таблица, **&lt;tr&gt;** - ред (Table Row), **&lt;th&gt;** - заглавна
+                        клетка, **&lt;td&gt;** - клетка с данни. <br>
+                        Атрибути на &lt;table&gt;: **`border`**, **`cellpadding`**, **`cellspacing`** (често заменени
+                        със CSS).
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;table border="1"&gt;<br>&nbsp;&nbsp;&lt;tr&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Име&lt;/th&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Марио&lt;/td&gt;<br>&nbsp;&nbsp;&lt;/tr&gt;<br>&lt;/table&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th>Име</th>
+                                <th>Години</th>
+                            </tr>
+                            <tr>
+                                <td>Марио</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Петър</td>
+                                <td>25</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;caption&gt;</td>
+                    <td class="tag-description-cell">Определя **заглавието/описанието на таблицата**. Поставя се
+                        непосредствено след отварящия таг **`&lt;table&gt;`**.</td>
+                    <td class="code-example-cell">
+                        <code>&lt;table&gt;<br>&nbsp;&nbsp;&lt;caption&gt;Отчет&lt;/caption&gt;<br>&nbsp;&nbsp;...<br>&lt;/table&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <table style="width: 100%;">
+                            <caption>Месечен Отчет</caption>
+                            <tr>
+                                <th>Месец</th>
+                                <th>Продажби</th>
+                            </tr>
+                            <tr>
+                                <td>Януари</td>
+                                <td>1200</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">`colspan` / `rowspan`</td>
+                    <td class="tag-description-cell">Атрибути, използвани в **`&lt;td&gt;`** или **`&lt;th&gt;`** за
+                        обединяване на клетки: **`colspan`** (хоризонтално/колони) и **`rowspan`** (вертикално/редове).
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;tr&gt;<br>&nbsp;&nbsp;&lt;th colspan="2"&gt;Общо&lt;/th&gt;<br>&lt;/tr&gt;<br>&lt;tr&gt;<br>&nbsp;&nbsp;&lt;td rowspan="2"&gt;Данни&lt;/td&gt;<br>&nbsp;&nbsp;&lt;td&gt;Елемент&lt;/td&gt;<br>&lt;/tr&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <table style="width: 100%;">
+                            <tr>
+                                <th colspan="2">Обединени Заглавия</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Обхваща 2 реда</td>
+                                <td>Данни 1</td>
+                            </tr>
+                            <tr>
+                                <td>Данни 2</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

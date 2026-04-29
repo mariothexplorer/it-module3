@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебен Център: Списъци</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню">
+        <!-- Менюто ще бъде вмъкнато от Razno/menu.html -->
+    </nav>
+
+    <div class="container">
+        <h2>HTML Тагове за Списъци</h2>
+
+        <table class="tag-table">
+            <thead>
+                <tr>
+                    <th>Таг</th>
+                    <th>Описание / Важни Атрибути</th>
+                    <th>HTML Пример</th>
+                    <th>Визуализация в Браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tag-name-cell">&lt;ul&gt; / &lt;li&gt;</td>
+                    <td class="tag-description-cell">
+                        **&lt;ul&gt;** създава **неномериран (точкован)** списък (Unordered List). Всеки елемент в
+                        списъка се дефинира с **&lt;li&gt;** (List Item).
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;Ябълки&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Банани&lt;/li&gt;<br>&lt;/ul&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <ul>
+                            <li>Ябълки</li>
+                            <li>Банани</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;ol&gt; / &lt;li&gt;</td>
+                    <td class="tag-description-cell">
+                        Създава **номериран (подреден)** списък (Ordered List). Елементите също се дефинират с
+                        **&lt;li&gt;**.
+                        <br>
+                        Важни: **`type`** (стил на номерацията), **`start`** (начална стойност).
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;ol type="A" start="3"&gt;<br>&nbsp;&nbsp;&lt;li&gt;Първа стъпка (C)&lt;/li&gt;<br>&nbsp;&nbsp;&lt;li&gt;Втора стъпка (D)&lt;/li&gt;<br>&lt;/ol&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <ol type="A" start="3">
+                            <li>Първа стъпка (C)</li>
+                            <li>Втора стъпка (D)</li>
+                        </ol>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</td>
+                    <td class="tag-description-cell">
+                        **&lt;dl&gt;** (Definition List) е за списъци с термини и дефиниции. **&lt;dt&gt;** е терминът,
+                        **&lt;dd&gt;** е дефиницията.
+                    </td>
+                    <td class="code-example-cell">
+                        <code>&lt;dl&gt;<br>&nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>&nbsp;&nbsp;&lt;dd&gt;- Маркиращ език.&lt;/dd&gt;<br>&nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>&nbsp;&nbsp;&lt;dd&gt;- Листове със стилове.&lt;/dd&gt;<br>&lt;/dl&gt;</code>
+                    </td>
+                    <td class="browser-view-cell">
+                        <dl>
+                            <dt style="font-weight: bold;">HTML</dt>
+                            <dd>- Език за маркиране.</dd>
+                            <dt style="font-weight: bold;">CSS</dt>
+                            <dd>- Стилове.</dd>
+                        </dl>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>

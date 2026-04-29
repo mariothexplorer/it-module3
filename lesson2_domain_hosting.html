@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домейн, Хостинг и Характеристики (Тъмна Навигация)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню"></nav>
+
+    <div class="container">
+        <h2>Избор на име и регистриране на уеб сайт</h2>
+
+        <ol class="main-list">
+            <li>
+                <span class="main-point">IP адрес</span>
+                <span class="explanation">– уникален адрес, образуван от поредица от числа, уникална за всяко устройство
+                    свързано с интернет. Използват се две версии:</span>
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">IPv4</span>
+                        <span class="explanation">– образуван от четири числа (от 0 до 255), разделени с точка.</span>
+                    </li>
+                    <li>
+                        <span class="main-point">IPv6</span>
+                        <span class="explanation">– образуван от осем числа (от 0 до 65 535 в 16-тичен код), разделени с
+                            двуеточие.</span>
+                    </li>
+                </ol>
+            </li>
+
+            <li>
+                <span class="main-point">Домейн</span>
+                <span class="explanation">– името, с което ще се вижда уебсайт, когато бъде публикуван в интернет. Всеки
+                    домейн може да се свърже с IP адрес, това е записано на **DNS (Domain Name System) сървъри.</span>
+            </li>
+
+            <li>
+                <span class="main-point">URL (Uniform Resource Locator)</span>
+                <span class="explanation">– система за достъп до всеки ресурс (напр. уеб страница, изображение,
+                    файл).</span>
+            </li>
+
+            <li>
+                <span class="main-point">Хостинг</span>
+                <span class="explanation">– услуга, която позволява да качите сайта си така, че да е видим за
+                    потребителите:</span>
+
+                <ol class="bulgarian-list">
+                    <li>
+                        <span class="main-point">Видове хостинг:</span>
+                        <ul class="dash-list">
+                            <li>Споделен хостинг – сървър има определен брой потребители, които си делят ресурсите на
+                                хостинга.</li>
+                            <li>Имейл хостинг – използва се за електронна поща.</li>
+                            <li>Файлов хостинг – като споделения, но само за файлове, не за уеб сайтове и приложения.
+                            </li>
+                            <li>Специализиран хостинг – клиентските приложения не споделят ресурсите на сървъра с други
+                                приложения на други потребители.</li>
+                            <li>Виртуален хостинг – един физически сървър се разделя на няколко виртуални сървъра.</li>
+                            <li>Облачен хостинг – услугите се извършват чрез облак.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="main-point">Характеристики на хостинг:</span>
+                        <ul class="dash-list">
+                            <li>
+                                Скорост – оказва влияние на бързината на зареждане на уеб сайта или приложението (Mbit/s
+                                или Gbit/s).
+
+                            </li>
+                            <li>
+                                Свързаност (Bandwidth) – количеството данни, което може физически да бъде изпратено през
+                                съответната мрежа, кабел от сайта към крайните потребители за точно определен времеви
+                                период.
+                            </li>
+                            <li>Съхранение на данни – количеството пространство, на което се съхраняват елементите на
+                                уеб сайта или приложението (в GB или TB).</li>
+                            <li>Скалируемост – възможността за повишаване ресурсите на уеб сървъра при нужда (ъпдейт или
+                                поддръжка).</li>
+                            <li>Контролен панел – платформа за управление на уеб хостинг.</li>
+                            <li>Поддръжка – наличие на системен администратор, която постоянно да наблюдава процеса на
+                                работа и може да отстрани даден проблем.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+    <script>
+        // JavaScript за управление на подменюто (дублирано за всеки файл)
+        // toggleSubmenu moved to scripts/menu.js
+        // Поддържа подменюто отворено, ако сме на тази или друга страница за планиране
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split('/').pop();
+            // Проверяваме дали текущата страница е в групата за планиране
+            if (currentPath.includes('lesson')) {
+                document.getElementById('planning-submenu').style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

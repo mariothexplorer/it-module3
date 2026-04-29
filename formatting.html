@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебен Център: Форматиране на Текст</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+
+    <nav id="site-nav" aria-label="Основно меню">
+        <!-- Менюто ще бъде вмъкнато от Razno/menu.html -->
+    </nav>
+
+    <div class="container">
+        <h2>HTML Тагове за Форматиране на Текст</h2>
+
+        <table class="tag-table">
+            <thead>
+                <tr>
+                    <th>Таг</th>
+                    <th>Описание / Значение</th>
+                    <th>HTML Пример</th>
+                    <th>Визуализация в Браузър</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Добавени тагове за заглавия, параграф и нов ред -->
+                <tr>
+                    <td class="tag-name-cell">&lt;h1&gt;</td>
+                    <td class="tag-description-cell">Дефинира най-важното заглавие (обикновено едно на страница).</td>
+                    <td class="code-example-cell"><code>&lt;h1&gt;Основен Наслов&lt;/h1&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h1-view">Основен Наслов</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;h2&gt;</td>
+                    <td class="tag-description-cell">Дефинира подзаглавие (от второ ниво).</td>
+                    <td class="code-example-cell"><code>&lt;h2&gt;Подзаглавие&lt;/h2&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h2-view">Подзаглавие</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;h3&gt;</td>
+                    <td class="tag-description-cell">Дефинира заглавие от трето ниво.</td>
+                    <td class="code-example-cell"><code>&lt;h3&gt;Малка Секция&lt;/h3&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h3-view">Малка Секция</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;h4&gt;</td>
+                    <td class="tag-description-cell">Дефинира заглавие от четвърто ниво.</td>
+                    <td class="code-example-cell"><code>&lt;h4&gt;Детайл&lt;/h4&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h4-view">Детайл</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;h5&gt;</td>
+                    <td class="tag-description-cell">Дефинира заглавие от пето ниво.</td>
+                    <td class="code-example-cell"><code>&lt;h5&gt;Бележка&lt;/h5&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h5-view">Бележка</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;h6&gt;</td>
+                    <td class="tag-description-cell">Дефинира най-малкото заглавие (шесто ниво).</td>
+                    <td class="code-example-cell"><code>&lt;h6&gt;Малка Бележка&lt;/h6&gt;</code></td>
+                    <td class="browser-view-cell"><span class="h6-view">Малка Бележка</span></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;p&gt;</td>
+                    <td class="tag-description-cell">Дефинира параграф от текст.</td>
+                    <td class="code-example-cell"><code>&lt;p&gt;Моят нов параграф.&lt;/p&gt;</code></td>
+                    <td class="browser-view-cell">
+                        <p class="m-0">Моят нов параграф.</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;br&gt;</td>
+                    <td class="tag-description-cell">Създава нов ред в текста (принудително пренасяне на следващия ред).
+                    </td>
+                    <td class="code-example-cell"><code>Първи ред&lt;br&gt;Втори ред</code></td>
+                    <td class="browser-view-cell">
+                        Първи ред<br>Втори ред
+                    </td>
+                </tr>
+
+                <!-- Оригинални тагове за форматиране -->
+                <tr>
+                    <td class="tag-name-cell">&lt;strong&gt;</td>
+                    <td class="tag-description-cell">Указва, че текстът е **важен**. По подразбиране е **удебелен**.
+                    </td>
+                    <td class="code-example-cell"><code>Това е &lt;strong&gt;много важен&lt;/strong&gt; текст.</code>
+                    </td>
+                    <td class="browser-view-cell">Това е <strong>много важен</strong> текст.</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;em&gt;</td>
+                    <td class="tag-description-cell">Указва, че текстът е **акцентиран** (emphazised). По подразбиране е
+                        *наклонен*.</td>
+                    <td class="code-example-cell"><code>Това е &lt;em&gt;акцентиран&lt;/em&gt; текст.</code></td>
+                    <td class="browser-view-cell">Това е <em>акцентиран</em> текст.</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;mark&gt;</td>
+                    <td class="tag-description-cell">Маркира (осветява) текст като **релевантен** (обикновено с **жълт
+                        фон**).</td>
+                    <td class="code-example-cell"><code>Намерих &lt;mark&gt;този термин&lt;/mark&gt;.</code></td>
+                    <td class="browser-view-cell">Намерих <span class="demo-mark">този термин</span>.</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;del&gt;</td>
+                    <td class="tag-description-cell">Маркира текст като **изтрит** (deleted). Показва се като
+                        **пречертан**.</td>
+                    <td class="code-example-cell"><code>Цена: &lt;del&gt;100 лв.&lt;/del&gt; 80 лв.</code></td>
+                    <td class="browser-view-cell">Цена: <span class="demo-del">100 лв.</span> 80 лв.</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;ins&gt;</td>
+                    <td class="tag-description-cell">Маркира текст като **вмъкнат** (inserted). Показва се като
+                        **подчертан**.</td>
+                    <td class="code-example-cell"><code>&lt;ins&gt;Ново съдържание&lt;/ins&gt; добавено.</code></td>
+                    <td class="browser-view-cell"><span class="demo-ins">Ново съдържание</span> добавено.</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;sub&gt;</td>
+                    <td class="tag-description-cell">Дефинира **долен индекс** (subscript). Използва се за химически
+                        формули.</td>
+                    <td class="code-example-cell"><code>Вода: H&lt;sub&gt;2&lt;/sub&gt;O</code></td>
+                    <td class="browser-view-cell">Вода: H<sub>2</sub>O</td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;sup&gt;</td>
+                    <td class="tag-description-cell">Дефинира **горен индекс** (superscript). Използва се за степени и
+                        бележки под линия.</td>
+                    <td class="code-example-cell"><code>Теорема: E=mc&lt;sup&gt;2&lt;/sup&gt;</code></td>
+                    <td class="browser-view-cell">Теорема: E=mc<sup>2</sup></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;b&gt;</td>
+                    <td class="tag-description-cell">Удебелява текст, когато **няма специално семантично значение**
+                        (само визуално).</td>
+                    <td class="code-example-cell"><code>&lt;b&gt;Визуален ефект&lt;/b&gt;</code></td>
+                    <td class="browser-view-cell"><b>Визуален ефект</b></td>
+                </tr>
+
+                <tr>
+                    <td class="tag-name-cell">&lt;i&gt;</td>
+                    <td class="tag-description-cell">Накланя текст, за да обозначи **алтернативен глас, термин или
+                        идиом** (само визуално).</td>
+                    <td class="code-example-cell"><code>&lt;i&gt;Латински термин&lt;/i&gt;</code></td>
+                    <td class="browser-view-cell"><i>Латински термин</i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer></footer>
+
+    <script src="scripts/insert-header.js"></script>
+    <script src="scripts/insert-menu.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/insert-footer.js"></script>
+</body>
+
+</html>
